@@ -4,7 +4,7 @@ import Table from './partner/Table';
 import Modal from './partner/Modal';
 import Alert from './Alert';
 import Loader from './Loader';
-import { debounce } from 'lodash';  // To add debouncing
+import { debounce } from 'lodash'; 
 
 function Partner({ selectedPartner }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -92,21 +92,19 @@ function Partner({ selectedPartner }) {
   const handleModalClose = () => {
     setIsModalOpen(false);
     setSelectedRow(null);
-    setSearchTerm('');  // Clear the search term after closing modal
-    filterPartners(''); // Reset the filtering
+    setSearchTerm('');  
+    filterPartners('');
   };
 
   const handleSave = async (updatedRow) => {
     try {
       if (isNewEntry) {
-        // Új bejegyzés létrehozása
         await axios.post('http://localhost:8000/api/createPartner', updatedRow, {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           },
         });
       } else {
-        // Módosítás egy meglévő bejegyzésnél
         await axios.post(`http://localhost:8000/api/updatePartner`, updatedRow, {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
@@ -132,7 +130,7 @@ function Partner({ selectedPartner }) {
           <div className="rounded-t mb-0 px-4 py-3 border-0">
             <div className="flex flex-wrap items-center">
               <div className="relative w-full px-4 max-w-full flex-grow flex-1">
-                <h3 className="font-semibold text-base text-blueGray-700 uppercase">Partner törzs</h3>
+                <h3 className="font-semibold text-base text-blueGray-700 uppercase">Partnertörzs</h3>
               </div>
               <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
                 <button

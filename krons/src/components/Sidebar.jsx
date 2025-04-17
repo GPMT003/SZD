@@ -59,20 +59,20 @@ function Sidebar() {
 
   return (
     <div className="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-4">
-      <h2 className="logo text-xl font-bold mx-3 mt-3 mb-6">KRONS</h2>
+      <h2 className="logo text-xl font-bold mx-3 mt-3 mb-6">NAVIGÁCIOS SÁV</h2>
       <nav>
         <ul>
-          <SidebarLink to="/partnertorzs" icon={<BsPeople className="text-lg" />} label="Partner törzs" />
+          <SidebarLink to="/partnertorzs" icon={<BsPeople className="text-lg" />} label="Partnertörzs" />
           <SidebarLink to="/ujbevetel" icon={<BsJournalPlus className="text-lg" />} label="Új Bevétel" />
           <SidebarLink to="/kiadas" icon={<BsJournalMinus className="text-lg" />} label="Új kiadás" />
-          <SidebarLink to="/cikktorzs" icon={<BsBook className="text-lg" />} label="Cikk Törzs" />
+          <SidebarLink to="/cikktorzs" icon={<BsBook className="text-lg" />} label="Cikktörzs" />
           <SidebarLink to="/dokumentok" icon={<BsFileText className="text-lg" />} label="Dokumentumok" />
 
           {userRole === 1 && (
             <>
-              <SidebarLink to="/mozgaskod" icon={<BsGear className="text-lg" />} label="Mozgás kód" />
+              <SidebarLink to="/mozgaskod" icon={<BsGear className="text-lg" />} label="Mozgáskód" />
               <SidebarLink to="/projekt" icon={<BsClipboardData className="text-lg" />} label="Projektek" />
-              <SidebarLink to="/export" icon={<BsFileEarmarkArrowUp className="text-lg" />} label="Adat Export" />
+              <SidebarLink to="/export" icon={<BsFileEarmarkArrowUp className="text-lg" />} label="AdatExport" />
               <SidebarLink to="/beallitas" icon={<BsWrench className="text-lg" />} label="Beállítás" />
               <SidebarLink to="/regisztracio" icon={<BsPersonPlus className="text-lg" />} label="Új felhasználó rögzítése" />
 

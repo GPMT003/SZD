@@ -1,12 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
 
 const PrivateRoute = ({ element, extraCheck }) => {
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, checkToken } = useContext(AuthContext);
 
+  
+ 
   if (!isLoggedIn) {
     return <Navigate to="/belepes" />;
+  }else{
+    checkToken()
   }
 
   if (!element) {

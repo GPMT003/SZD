@@ -32,7 +32,7 @@ class ItemController extends Controller
             'itemNumber' => 'required|string|max:255|unique:items,itemNumber',
             'name' => 'required|string|max:255',
             'vatContent' => 'required',
-            'vtsz' => 'string|max:255',
+            'vtsz' => 'max:255',
             'unit' => 'required|string|max:255',
             'purchasePrice' => 'required|numeric|min:0',
         ],$this->ValMsg() );
@@ -63,7 +63,7 @@ class ItemController extends Controller
             'itemNumber' => 'required|string|max:255|unique:items,itemNumber,' . $id,
             'name' => 'required|string|max:255',
             'vatContent' => 'required',
-            'vtsz' => 'string|max:255',
+            'vtsz' => 'max:255',
             'unit' => 'required|string|max:255',
             'purchasePrice' => 'required|numeric|min:0',
         ], $this->ValMsg());

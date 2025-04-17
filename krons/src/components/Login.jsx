@@ -29,17 +29,14 @@ function Login() {
                 password
             });
 
-            // Store session data
             sessionStorage.setItem('role', response.data.role);
             sessionStorage.setItem('token', response.data.token);
             sessionStorage.setItem('isLoggedIn', JSON.stringify(true));
 
-            // Update context and navigate
             setIsLoggedIn(true);
             setShowAlert(false);
             navigate('/');
         } catch (error) {
-            // Handle specific error types
             setErrorMessage(error.response?.data?.message || 'Hiba történt a folyamat során');
             setShowAlert(true);
         } finally {
@@ -57,7 +54,7 @@ function Login() {
         if (id === 'name') setName(value);
         if (id === 'password') setPassword(value);
 
-        // Reset error message when user starts typing
+   
         if (showAlert) {
             setErrorMessage('');
             setShowAlert(false);
@@ -67,7 +64,7 @@ function Login() {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-                <h2 className="text-2xl font-bold mb-6 text-center">KRONOS</h2>
+                <h2 className="text-2xl font-bold mb-6 text-center">Bejelentkezési Felület</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block text-gray-700 mb-2" htmlFor="name">
