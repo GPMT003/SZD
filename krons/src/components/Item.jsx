@@ -5,7 +5,7 @@ import Modal from './Item/Modal';
 import Alert from './Alert';
 import Loader from './Loader';
 
-const vatOptions = ['0%', '5%', '18%', '27%', 'FAD' , 'LNV5%', 'LNV18%', 'LNV27%', 'ÁKK'];
+const vatOptions = ['0%', '5%', '18%', '27%', 'FAD'];
 const unitOptions = ['db', 'kg', 'm', 'm2', 'm3'];
 
 const API_URL = 'http://localhost:8000/api';
