@@ -31,7 +31,6 @@ function Project() {
     fetchPartners();
   }, []);
 
-  // Fetch projects from API
   const fetchProjects = async () => {
     try {
       const response = await axiosInstance.post('projects', {});
@@ -41,7 +40,6 @@ function Project() {
     }
   };
 
-  // Fetch partners from API
   const fetchPartners = async () => {
     setLoading(true);
     try {

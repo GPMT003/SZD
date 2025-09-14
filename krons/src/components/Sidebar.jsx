@@ -55,7 +55,7 @@ function Sidebar() {
     setShowAlert(false);
   };
 
-  const userRole = parseInt(sessionStorage.getItem('role'), 10);
+  const userRole = sessionStorage.getItem('role');
 
   return (
     <div className="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-4">
@@ -68,7 +68,7 @@ function Sidebar() {
           <SidebarLink to="/cikktorzs" icon={<BsBook className="text-lg" />} label="Cikktörzs" />
           <SidebarLink to="/dokumentok" icon={<BsFileText className="text-lg" />} label="Dokumentumok" />
 
-          {userRole === 1 && (
+          {userRole === 'true' && (
             <>
               <SidebarLink to="/mozgaskod" icon={<BsGear className="text-lg" />} label="Mozgáskód" />
               <SidebarLink to="/projekt" icon={<BsClipboardData className="text-lg" />} label="Projektek" />

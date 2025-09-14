@@ -34,8 +34,8 @@ function ProjectDetail({ isOpen, onClose, projectId }) {
 
   const formatNumber = (number) => parseFloat(number).toFixed(2);
 
-  const totalAmount = receipts.reduce((acc, receipt) => acc + parseFloat(receipt.totalAmount), 0);
-  const totalAvgCost = receipts.reduce((acc, receipt) => acc + parseFloat(receipt.totalAvgCost), 0);
+  const totalAmount = receipts.reduce((acc, receipt) => acc + parseFloat(receipt.totalamount), 0);
+  const totalAvgCost = receipts.reduce((acc, receipt) => acc + parseFloat(receipt.totalavgcost), 0);
 
   const handleCloseAlert = () => setAlert({ message: '', type: '' });
 
@@ -59,9 +59,9 @@ function ProjectDetail({ isOpen, onClose, projectId }) {
             {receipts.map((receipt) => (
               <tr key={receipt.documentId}>
                 <td className="border px-4 py-2">{receipt.date}</td>
-                <td className="border px-4 py-2">{formatNumber(receipt.totalAmount)}</td>
+                <td className="border px-4 py-2">{formatNumber(receipt.totalamount)}</td>
                 <td className="border px-4 py-2">{receipt.documentId}</td>
-                <td className="border px-4 py-2">{formatNumber(receipt.totalAvgCost)}</td>
+                <td className="border px-4 py-2">{formatNumber(receipt.totalavgcost)}</td>
               </tr>
             ))}
           </tbody>
